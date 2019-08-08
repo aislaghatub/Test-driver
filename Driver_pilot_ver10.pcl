@@ -205,7 +205,7 @@ begin
 	end;
 
 	out3.print( caption + "\n");
-	term.print(caption + "\n"); 
+	#term.print(caption + "\n"); 
 
 	int num_w_correct=0;
 	int num_typed_words = 1; # accounting for the fact that there is no spacebar after the last word
