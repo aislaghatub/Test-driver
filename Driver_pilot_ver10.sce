@@ -14,15 +14,31 @@ begin;
 
 picture {} default;
 
+# instructions for experiment 
 trial {   
-   picture {
-	
+   trial_duration = forever;
+   trial_type = specific_response;
+	terminator_button = 2;
+   picture {	
+      text { caption = "You will hear a mixture of speech and you are required to \n
+			attend to the speaker that matches the video/face on the screen. \n
+			Keep your head centered facing the middle of the screen and \n
+			shift your eyes to look at the lips of the speaker. \n
+			The target speaker will randomly switch between the left and right side of the screen"; 
+		font_size = 20;} begin_text;
+      x = 0; y = 0;
+   } begin_pic;
+} begin_trl;
+
+# instructions on typing words
+trial {   
+   picture {	
       text { caption = " "; font_size = 20;} instruc_text;
       x = 0; y = 0;
    } instruc_pic;
 } instruc_trl;
 
-
+# get typed text to display
 trial {
 picture {
     default_code = "picr";
