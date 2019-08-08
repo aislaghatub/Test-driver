@@ -139,7 +139,6 @@ begin
 	
 	parameter_window.set_parameter(status_parameter, "Cue");
 	start_trial.present();
-	current_time = clock.time();
 	
 	parameter_window.set_parameter(status_parameter, "Trial");
 	stim_trial.present();
