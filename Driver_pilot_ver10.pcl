@@ -269,9 +269,10 @@ begin
 		
 	end;
 	#term.print(string( num_w_correct)+ "\n");
-
 	int words_score=0;
-	finish_txt.set_caption("You scored " + string(num_w_correct) + "/" + string(5) + " Correct.\n\nPress spacebar to continue");
+	
+	int percent_correct = (num_w_correct/5)*100;	
+	finish_txt.set_caption("You scored " + string(percent_correct) + "%.\n\nPress spacebar to continue");
 	finish_txt.redraw();
 	finish_trial.present();
 
