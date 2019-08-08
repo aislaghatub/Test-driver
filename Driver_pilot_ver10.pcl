@@ -80,52 +80,6 @@ out2.print( "Run\tTrial\tWords\n" );
 output_file out3 = new output_file;
 out3.open( logfile.subject() + "-typed_words.txt" ); 
 
-#Define mouse variables
-int answer;
-mouse mse = response_manager.get_mouse( 1 );
-
-#Define button locations for test words
-int num_locations = 16;
-array<int> location[num_locations][4];	
-
-location[1] = { -300, 100, 183, 209 };
-location[2] = { -300, 100, 131, 149 };
-location[3] = { -300, 100, 71, 89 };
-location[4] = { -300, 100,  11, 29 };
-location[5] = { -300, 100, -47, -29 };
-location[6] = { -300, 100, -107, -89 };
-location[7] = { -300, 100, -167, -149 };
-location[8] = { -300, 100, -227, -209 };
-location[9] = { 0, 400, 183, 209 };
-location[10] = { 0, 400, 131, 149 };
-location[11] = { 0, 400, 71, 89 };
-location[12] = { 0, 400, 11, 29 };
-location[13] = { 0, 400,-47, -29};
-location[14] = { 0, 400, -107, -89 };
-location[15] = { 0, 400, -167, -149 };
-location[16] = { 325, 590, -359, -329 };
-
-
-# Get selection for word
-mse.set_xy( 0, 0 ); 
-sub
-	int get_wrd_selection # how to find what box was selected
-begin
-	int x = mse.x();
-	int y = mse.y();
-		loop 
-			int j = 1
-		until 
-			j > num_locations 
-		begin
-			if x >= location[j][1] && x <= location[j][2] && y >= location[j][3] && y <= location[j][4] then
-				return j
-			end;
-			j = j + 1;
-		end;
-		return 0
-	end;
-
 # subroutine to sum elements of an array
 sub
     int int_array_sum( array<int,1>& my_array )
@@ -145,7 +99,6 @@ end;
 
 #Define trial variables
 int run;
-int current_time;
 
 #Loop through all trials
 loop 
@@ -217,7 +170,6 @@ begin
 	instruc_text.redraw();
 	instruc_pic.present();
 
-	
 	# Enter is the default deliminator
 	system_keyboard.set_case_mode( system_keyboard.CASE_UPPER );
 	system_keyboard.set_max_length( 1 );
@@ -267,7 +219,6 @@ begin
 		end;
 		
 	end;
-	
 
 	out3.print( caption + "\n");
 	term.print(caption + "\n"); 
