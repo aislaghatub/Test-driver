@@ -22,14 +22,14 @@ trial {
    picture {	
       text { caption = "You will hear a mixture of speech and you are required to \n
 			attend to the speaker that matches the video/face on the screen. \n\n
-			After each trial (~3s) you will be asked to type the words you heard on that trial \n
+			After each trial (3 secs) you will be asked to type the words you heard on that trial \n
 			So try your best! \n\n
 			Keep your head centered facing the middle of the screen and \n
 			shift your eyes to look at the lips of the speaker. \n\n
 			The target speaker will randomly switch between the left and right side \n
 			of the screen on different trials \n\n
-			Good luck!"; 
-		font_size = 30;} begin_text;
+			Press spacebar to begin. Good luck! "; 
+		font_size = 30; font_color = 64, 64, 64; } begin_text;
       x = 0; y = 0;
    } begin_pic;
 } begin_trl;
@@ -37,7 +37,7 @@ trial {
 # instructions on typing words
 trial {   
    picture {	
-      text { caption = " "; font_size = 20;} instruc_text;
+      text { caption = " "; font_size = 40; font_color = 64, 64, 64; } instruc_text;
       x = 0; y = 0;
    } instruc_pic;
 } instruc_trl;
@@ -46,7 +46,7 @@ trial {
 trial {
 picture {
     default_code = "picr";
-    text { caption=" "; font_size = 20;} response_text;
+    text { caption=" "; font_size = 20; font_color = 64, 64, 64; } response_text;
     x = 0; y = 0;
 } pic1;
 } trial1;
