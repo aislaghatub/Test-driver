@@ -14,22 +14,6 @@ array<int> conds[2];
 
 parameter_window.set_parameter(totaltrial_parameter, string(total_trials));
 
-/*# randomise trials within block to ensure repetitions are at least 'trials_per_cond' mins apart
-loop 
-	int i = 1 
-until 
-	i > total_trials/2
-begin
-	trial_order[i] = i;
-	conds[1] = i;
-	conds[2] = i+(total_trials/2);
-	conds.shuffle();
-	trial_order[i] = conds[1];
-	trial_order[i+(total_trials/2)] = conds[2];
-	i = i + 1;
-end;
-*/
-
 loop 
 	int i = 1 
 until 
@@ -38,8 +22,7 @@ begin
 	trial_order[i] = i;
 	i = i + 1;
 end;
-#trial_order.shuffle();
-#term.print(trial_order);
+trial_order.shuffle();
 
 #Generate array of stimuli names
 array <string> start_pics[total_trials];
@@ -74,7 +57,6 @@ begin
 end;
 #term.print(words_order);
 
-	
 #Output trial order
 output_file out1 = new output_file; 
 out1.open( logfile.subject() + "-trial_order.txt" ); 
@@ -101,7 +83,6 @@ out3.open( logfile.subject() + "-typed_words.txt" );
 #Define mouse variables
 int answer;
 mouse mse = response_manager.get_mouse( 1 );
-
 
 #Define button locations for test words
 int num_locations = 16;
@@ -180,7 +161,7 @@ begin
 	array<string> true_words[num_words];
 	#term.print(word);
 	
-/*	# load words to present
+	# load words to present
 	input_file wrds = new input_file; 
 	wrds.open( "E://Aisling//Presentation Driver Rep//keywords//keywords_" + string(word) + ".txt" ); 
 	wrds.set_delimiter( '\t' ); 
@@ -196,7 +177,7 @@ begin
 		j = j + 1;
 	end;
 	wrds.close();
-	*/
+	
 
 #************************************************************************************************
 	
