@@ -83,6 +83,8 @@ out3.open( logfile.subject() + "-typed_words.txt" );
 #Define trial variables
 int run;
 
+begin_trl.present();
+
 #Loop through all trials
 loop 
 	int i = 1
