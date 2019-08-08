@@ -163,7 +163,7 @@ begin
 	
 	# load words to present
 	input_file wrds = new input_file; 
-	wrds.open( "E://Aisling//Presentation Driver Rep//keywords//keywords_" + string(word) + ".txt" ); 
+	wrds.open( "E://Aisling//Test driver//keywords//keywords_" + string(word) + ".txt" ); 
 	wrds.set_delimiter( '\t' ); 
    loop 
 		int j = 1
