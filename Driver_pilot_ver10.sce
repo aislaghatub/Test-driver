@@ -4,8 +4,8 @@ default_path = "E://Aisling//Test driver//Videos//";
 # some comment
 response_matching = simple_matching;
 response_logging = log_active;
-active_buttons = 3;
-button_codes = 120, 125, 124;
+active_buttons = 2;
+button_codes = 120, 125;
 
 write_codes = true; 
 pulse_width = 10;
