@@ -702,15 +702,6 @@
 <offset>14</offset>
 <offset>57</offset>
 </idv>
-<idv>
-<device_type>2</device_type>
-<dx_device_type>18</dx_device_type>
-<ibn>Button 0</ibn>
-<idn>Mouse</idn>
-<index>2</index>
-<label></label>
-<offset>12</offset>
-</idv>
 <mse>
 <device_type>2</device_type>
 <dx_device_type>18</dx_device_type>
@@ -782,7 +773,7 @@
 <attenuation>0</attenuation>
 <do_attenuation>0</do_attenuation>
 <do_volume>1</do_volume>
-<volume>1</volume>
+<volume>0.8</volume>
 </svl>
 <swp>1</swp>
 <text_encoding>utf8</text_encoding>
