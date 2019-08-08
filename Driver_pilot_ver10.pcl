@@ -80,23 +80,6 @@ out2.print( "Run\tTrial\tWords\n" );
 output_file out3 = new output_file;
 out3.open( logfile.subject() + "-typed_words.txt" ); 
 
-# subroutine to sum elements of an array
-sub
-    int int_array_sum( array<int,1>& my_array )
-begin
-    int sum = 0;
-
-    loop
-        int i = 1
-    until
-        i > my_array.count()
-    begin
-        sum = sum + my_array[i];
-        i = i + 1;
-    end;
-    return sum
-end;
-
 #Define trial variables
 int run;
 
