@@ -31,6 +31,7 @@ begin
 	# loop for each condition
 	loop int j=1 until j> num_conds begin
 		cond[j] = i + (j-1)*trials_per_cond;
+		term.print(string(cond[j]) + "\n");
 		j=j+1;
 	end;		
 	shuffle_order.shuffle(); 
@@ -46,6 +47,7 @@ begin
 	
 	i = i + 1;
 end; 
+
 
 #Generate array of stimuli names
 array <string> start_pics[total_trials];
@@ -73,6 +75,7 @@ end;
 
 #term.print( videos );
 
+/*
 #Read in words for intelligiblity test
 int num_words = 5; # per trial
 array <int> words_order[num_uniq_trials];
@@ -85,17 +88,18 @@ begin
 	i = i + 1;
 end;
 #term.print(words_order);
+*/
 
 #Output trial order
 output_file out1 = new output_file; 
 out1.open( logfile.subject() + "-trial_order.txt" ); 
-out1.print( "Run\tTrial\n" );
+out1.print( "Run\tTrial\tCondition" );
 loop 
 	int i = 1 
 until 
 	i > total_trials 
 begin
-	out1.print( string(i) + "\t" + string(trial_order[i]) + "\n" ); 
+	out1.print( string(i) + "\t" + string(trial_order[i]) + "\n" + string(cond_order[i])); 
 	i = i + 1;
 end;
 out1.close();
@@ -112,6 +116,8 @@ out3.open( logfile.subject() + "-typed_words.txt" );
 #Define trial variables
 int run;
 
+
+#---------------------------------START EXPERIMENT-------------------------------------------#
 begin_trl.present();
 
 #Loop through all trials
@@ -120,10 +126,13 @@ loop
 until 
 	i > total_trials 
 begin
+	
 	parameter_window.set_parameter(trial_parameter, string(i));
 	
 	#Define trial and target index
 	run = trial_order[i];
+	
+	/*
 	int word = words_order[i];
 	array<string> true_words[num_words];
 	#term.print(word);
@@ -147,7 +156,7 @@ begin
 		j = j + 1;
 	end;
 	wrds.close();
-	
+	*/
 	
 
 #************************************************************************************************
@@ -158,7 +167,7 @@ begin
 	default_start_pic.set_filename( start_pics[run] ); default_start_pic.load();
 	vid.set_filename( videos[run] );
 	# set location of video based on condition 
-	if run > total_trials/2 then
+	if run > total_trials/num_conds then
 		vid.set_x(600); # put video on right
 	end;
 	stim_event.set_event_code( string(run) );
@@ -173,9 +182,14 @@ begin
 	parameter_window.set_parameter(status_parameter, "Cue");
 	start_trial.present();
 	
+	et_start_trig.present();
+	
 	parameter_window.set_parameter(status_parameter, "Trial");
 	stim_trial.present();
 	vid.release();
+	
+	et_end_trig.present();
+	
 	stop_trial.present();
 
 	parameter_window.set_parameter(status_parameter, "Break");
