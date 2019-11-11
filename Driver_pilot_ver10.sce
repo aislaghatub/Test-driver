@@ -118,27 +118,43 @@ trial {
 	nothing {};
 	code = "126";
 	port_code = 126;
-	time = 1000;
+	time = 300;
 } start_trial;
+
+# start trigger to align eye data with EEG
+trial {
+	nothing {};
+	code = "98";
+	port_code = 98;
+	time = 300; 
+} et_start_trig;
 
 trial {
 	stimulus_event {
 		video vid;
 		code = "0,0";
 		port_code = 0;
-		time = 1000;
+		time = 300;
 	} stim_event;
 	picture end_pic;
 } stim_trial;
+
+# end trigger to align eye data with EEG
+trial {
+	nothing {};
+	code = "99";
+	port_code = 99;
+	time = 300; 
+} et_end_trig;
 
 trial {
 	nothing {};
 	code = "127";
 	port_code = 127;
-	time = 2000;
+	time = 300;
 } stop_trial;
 
-	
+
 trial {
    trial_duration = forever;
    trial_type = specific_response;
