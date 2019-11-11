@@ -1,24 +1,64 @@
 Scenario - 
-Logfile written - 11/11/2019 14:23:41
+Logfile written - 11/11/2019 15:36:49
 
 Subject	Trial	Event Type	Code	Time	TTime	Uncertainty	Duration	Uncertainty	ReqTime	ReqDur	Stim Type	Pair Index
 
-t	1	Response	125	11364	11197	1
-t	2	Response	125	22964	10130	1
-t	3	Nothing	126	33000	10000	1			10000		other	0
-t	4	Video	3	43333	10000	1			10000		other	0
-t	4	Quit		60964	27631	NA
+t	1	Response	125	8399	8233	1
+t	2	Response	125	48320	37486	1
+t	3	Nothing	126	58500	10000	1			10000		other	0
+t	4	Video	1	69000	10000	2			10000		other	0
+t	5	Nothing	127	120574	20000	1			20000		other	0
+t	5	Text Input	L	129360	28785	0
+t	5	Text Input	A	130639	30065	0
+t	5	Text Input	T	135759	35185	0
+t	5	Text Input	C	137839	37265	0
+t	5	Text Input	H	139039	38465	0
+t	5	Text Input	 	141360	40786	0
+t	5	Response	125	141360	40786	1
+t	5	Text Input	B	142799	42225	0
+t	5	Text Input	A	151280	50706	0
+t	5	Text Input	C	153920	53346	0
+t	5	Text Input	K	155359	54785	0
+t	5	Text Input	 	157441	56867	0
+t	5	Response	125	157441	56867	1
+t	5	Text Input	G	159359	58785	0
+t	5	Text Input	A	160079	59505	0
+t	5	Text Input	T	161759	61185	0
+t	5	Text Input	E	165039	64465	0
+t	5	Text Input	 	167039	66465	0
+t	5	Response	125	167039	66465	1
+t	5	Text Input	N	168719	68145	0
+t	5	Text Input	E	169281	68707	0
+t	5	Text Input	E	170639	70065	0
+t	5	Text Input	D	172479	71905	0
+t	5	Text Input	S	174879	74305	0
+t	5	Text Input	 	176559	75985	0
+t	5	Response	125	176559	75985	1
+t	5	Text Input	N	178720	78146	0
+t	5	Text Input	A	179600	79026	0
+t	5	Text Input	I	186879	86305	0
+t	5	Text Input	L	188959	88385	0
+t	5	Text Input		191360	90786	0
+t	6	Response	125	199439	7940	1
+t	7	Response	125	207359	5693	1
+t	8	Nothing	126	217500	10000	1			10000		other	0
+t	9	Video	2	227833	10000	2			10000		other	0
+t	9	Quit		239852	22019	NA
 
 
 video summary
 filename	start frame	end frame	frames presented	frames dropped	start time	end time	duration
-E:\Aisling\Test driver\Videos\s3_face_audio345.avi	1	87	87	0	43333	60833	17500
+E:\Aisling\Test driver\Videos\s1_face_audio123.avi	1	156	156	0	69000	100500	31500
+E:\Aisling\Test driver\Videos\s2_face_audio234.avi	1	59	59	0	227833	239833	12000
 
 
 Event Type	Code	Type	Response	RT	RT Uncertainty	Time	Uncertainty	Duration	Uncertainty	ReqTime	ReqDur
 
-Nothing	126	other				33000	1			10000
-Video	3	other				43333	1			10000
+Nothing	126	other				58500	1			10000
+Video	1	other				69000	2			10000
+Nothing	127	other				120574	1			20000
+Nothing	126	other				217500	1			10000
+Video	2	other				227833	2			10000
 
 
 {
@@ -32,5 +72,5 @@ Video	3	other				43333	1			10000
    },
    "scenario": "Driver_pilot_ver10.sce",
    "subject": "t",
-   "timestamp": "2019/11/11 19:23:34 GMT"
+   "timestamp": "2019/11/11 20:36:23 GMT"
 }
