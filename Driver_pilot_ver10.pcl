@@ -10,44 +10,20 @@ int wordscore = parameter_window.add_parameter( "Words Score" );
 # Set-up conditions and trials
 int num_uniq_trials = 205;
 int trials_per_cond = 307;
-int num_conds=2;
+int num_conds = 2;
+int num_reps = 3;
 
 int total_trials = trials_per_cond*num_conds;
 array<int> trial_order[total_trials];
 array <int> cond_order[total_trials];
+array <int> vid_order[total_trials];
+
+array<int> block[num_reps];
 array<int> cond[num_conds];
-array<int> shuffle_order[num_conds];
-shuffle_order.fill(1,num_conds,1,1); #start_index, end_index, start_value, value_step 
+array<int> shuffle_order[num_reps];
+shuffle_order.fill(1,num_reps,1,1); #start_index, end_index, start_value, value_step 
 
 parameter_window.set_parameter(totaltrial_parameter, string(total_trials));
-
-# randomise trials within block to ensure repetitions are at least 'trials_per_cond' mins apart
-loop 
-	int i = 1 
-until 
-	i > trials_per_cond 
-begin
-	
-	# loop for each condition
-	loop int j=1 until j> num_conds begin
-		cond[j] = i + (j-1)*trials_per_cond;
-		term.print(string(cond[j]) + "\n");
-		j=j+1;
-	end;		
-	shuffle_order.shuffle(); 
-	
-	loop int j=1 until j> num_conds begin
-		int idx=i+(j-1)*trials_per_cond;
-		trial_order[idx] = cond[shuffle_order[j]];
-		
-		cond_order[idx] = shuffle_order[j];
-		
-		j=j+1;
-	end;
-	
-	i = i + 1;
-end; 
-
 
 #Generate array of stimuli names
 array <string> start_pics[total_trials];
@@ -75,7 +51,63 @@ end;
 
 #term.print( videos );
 
+
+# randomise trials within block to ensure repetitions are at least 'trials_per_cond' mins apart
+loop 
+	int i = 1 
+until 
+	i > num_uniq_trials 
+begin
+	
+	# loop for each condition
+	loop int j=1 until j>num_reps begin
+		
+		block[j] = i + (j-1)*num_uniq_trials;
+		# term.print(string(cond[j]) + "\n");
+		j=j+1;
+	end;		
+	shuffle_order.shuffle(); 
+	
+	loop int j=1 until j>num_reps begin
+		
+		int idx = i + (j-1)*num_uniq_trials;
+		term.print(string(idx) + "\n");
+		
+		trial_order[idx] = block[shuffle_order[j]];
+		term.print(string(trial_order[idx]) + "\n");
+		
+		if trial_order[idx] > total_trials/2 then
+			cond_order[idx] = 2;
+		else
+			cond_order[idx] = 1;
+		end;	
+		term.print(string(cond_order[idx]) + "\n");
+		
+		if i <= num_uniq_trials then
+			vid_order[idx] = i;
+		else
+			vid_order[idx] = i-num_uniq_trials-1;
+		end;
+		term.print(string(vid_order[idx]) + "\n");
+		
+		j=j+1;
+	end;
+	
+	i = i + 1;
+end; 
+
 /*
+# Randomly choose 100 trials to ask behavior on
+array<int> behav_trials[100];
+
+loop int i=1 until i>99 begin
+	behav_trials[i] = random( 1, total_trials );
+	term.print(string(behav_trials[i])); 
+	i=i+1;
+end;
+*/
+
+
 #Read in words for intelligiblity test
 int num_words = 5; # per trial
 array <int> words_order[num_uniq_trials];
@@ -84,22 +116,22 @@ loop
 until 
 	i > num_uniq_trials 
 begin
-	words_order[i] = trial_order[i]; 
+	words_order[i] = i; 
 	i = i + 1;
 end;
 #term.print(words_order);
-*/
+
 
 #Output trial order
 output_file out1 = new output_file; 
 out1.open( logfile.subject() + "-trial_order.txt" ); 
-out1.print( "Run\tTrial\tCondition" );
+out1.print( "Run\tTrial\tCond\tVid\n " ); 
 loop 
 	int i = 1 
 until 
 	i > total_trials 
 begin
-	out1.print( string(i) + "\t" + string(trial_order[i]) + "\n" + string(cond_order[i])); 
+	out1.print( string(i) + "\t" + string(trial_order[i]) + "\t" + string(cond_order[i])  + "\t" + string(vid_order[i])); 
 	i = i + 1;
 end;
 out1.close();
@@ -124,7 +156,7 @@ begin_trl.present();
 loop 
 	int i = 1
 until 
-	i > total_trials 
+	i > num_uniq_trials #total_trials 
 begin
 	
 	parameter_window.set_parameter(trial_parameter, string(i));
@@ -132,7 +164,7 @@ begin
 	#Define trial and target index
 	run = trial_order[i];
 	
-	/*
+	
 	int word = words_order[i];
 	array<string> true_words[num_words];
 	#term.print(word);
@@ -156,7 +188,7 @@ begin
 		j = j + 1;
 	end;
 	wrds.close();
-	*/
+	
 	
 
 #************************************************************************************************
