@@ -132,7 +132,7 @@ trial {
 trial {
 	stimulus_event {
 		video vid;
-		code = "0,0";
+		code = "0";
 		port_code = 0;
 		time = 300;
 	} stim_event;
