@@ -46,7 +46,7 @@ trial {
 trial {
 picture {
     default_code = "picr";
-    text { caption=" "; font_size = 20; font_color = 64, 64, 64; } response_text;
+    text { caption=" "; font_size = 30; font_color = 64, 64, 64; } response_text;
     x = 0; y = 0;
 } pic1;
 } trial1;
@@ -83,7 +83,7 @@ picture {
 
 video { 
 	filename = "s1_face_audio123.avi";
-	x = -500; y = 0; # left position
+	x = -600; y = 0; # left position
 	#x = 500; y = 0; # right position
    height = 896; width = 672; 
 	#end_time = 3000;  #for debugging 

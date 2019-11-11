@@ -130,7 +130,7 @@ begin
 	vid.set_filename( videos[run] );
 	# set location of video based on condition 
 	if run > total_trials/2 then
-		vid.set_x(500); # put video on right
+		vid.set_x(600); # put video on right
 	end;
 	stim_event.set_event_code( string(run) );
 	stim_event.set_port_code( trial_order[i] );
@@ -150,7 +150,7 @@ begin
 	stop_trial.present();
 
 	parameter_window.set_parameter(status_parameter, "Break");
-	vid.set_x(-500); # return video to default position 
+	vid.set_x(-600); # return video to default position 
 #****************************************************************************************
 
 	#Use get input and show what was typed after pressing enter

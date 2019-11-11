@@ -1,0 +1,36 @@
+Scenario - 
+Logfile written - 11/11/2019 14:23:41
+
+Subject	Trial	Event Type	Code	Time	TTime	Uncertainty	Duration	Uncertainty	ReqTime	ReqDur	Stim Type	Pair Index
+
+t	1	Response	125	11364	11197	1
+t	2	Response	125	22964	10130	1
+t	3	Nothing	126	33000	10000	1			10000		other	0
+t	4	Video	3	43333	10000	1			10000		other	0
+t	4	Quit		60964	27631	NA
+
+
+video summary
+filename	start frame	end frame	frames presented	frames dropped	start time	end time	duration
+E:\Aisling\Test driver\Videos\s3_face_audio345.avi	1	87	87	0	43333	60833	17500
+
+
+Event Type	Code	Type	Response	RT	RT Uncertainty	Time	Uncertainty	Duration	Uncertainty	ReqTime	ReqDur
+
+Nothing	126	other				33000	1			10000
+Video	3	other				43333	1			10000
+
+
+{
+   "app": "Presentation Version 20.3 Build 02.25.19",
+   "device": "MSI MS-7A59",
+   "experiment": "{4B0EC51D-DE67-43D3-B43B-82E306235687}",
+   "os": "Windows 10 64 bit",
+   "package": "",
+   "parameters": {
+      "configuration": "Default configuration"
+   },
+   "scenario": "Driver_pilot_ver10.sce",
+   "subject": "t",
+   "timestamp": "2019/11/11 19:23:34 GMT"
+}
