@@ -112,9 +112,13 @@ begin
 		words4pic[j].set_caption( curr_word );
 		words4pic[j].redraw();
 		true_words[j]=curr_word;
+		
+		term.print(true_words[j]);
+		
 		j = j + 1;
 	end;
 	wrds.close();
+	
 	
 
 #************************************************************************************************
@@ -265,10 +269,10 @@ begin
 				end;
 				w=w+1;
 		end;
-		#term.print(string(num_typed_words)+ "\n"); 
+		term.print(string(num_typed_words)+ "\n"); 
 		
 	end;
-	#term.print(string( num_w_correct)+ "\n");
+	term.print(string( num_w_correct)+ "\n");
 	int words_score=0;
 	
 	int percent_correct = (num_w_correct/5)*100;	

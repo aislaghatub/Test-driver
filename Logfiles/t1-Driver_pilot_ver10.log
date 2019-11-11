@@ -1,0 +1,25 @@
+Scenario - 
+Logfile written - 11/11/2019 13:56:10
+
+Subject	Trial	Event Type	Code	Time	TTime	Uncertainty	Duration	Uncertainty	ReqTime	ReqDur	Stim Type	Pair Index
+
+t1	1	Response	125	100942	100776	10
+
+
+Event Type	Code	Type	Response	RT	RT Uncertainty	Time	Uncertainty	Duration	Uncertainty	ReqTime	ReqDur
+
+
+
+{
+   "app": "Presentation Version 20.3 Build 02.25.19",
+   "device": "MSI MS-7A59",
+   "experiment": "{4B0EC51D-DE67-43D3-B43B-82E306235687}",
+   "os": "Windows 10 64 bit",
+   "package": "",
+   "parameters": {
+      "configuration": "Default configuration"
+   },
+   "scenario": "Driver_pilot_ver10.sce",
+   "subject": "t1",
+   "timestamp": "2019/11/11 18:55:59 GMT"
+}
