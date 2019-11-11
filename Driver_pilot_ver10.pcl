@@ -113,7 +113,7 @@ begin
 		words4pic[j].redraw();
 		true_words[j]=curr_word;
 		
-		term.print(true_words[j]);
+		#term.print(true_words[j]);
 		
 		j = j + 1;
 	end;
@@ -223,8 +223,8 @@ begin
 		loop int w=start_val until w>caption.count() begin
 
 				if w==start_val && caption[w] != 32 then	# special case for beginning
-					term.print(string(1)+ "\n");
-					curr_char=caption.substring(1,1);
+					#term.print(string(1)+ "\n");
+					curr_char=caption.substring(1,1); # substring( int index, int length ) 
 					typed_word.append(curr_char);
 				end;
 
@@ -251,8 +251,10 @@ begin
 
 					loop int j=1 until j > num_words begin						
 						string true_word = true_words[j];
-						term.print(typed_word + "\n");
-
+						
+						#term.print(typed_word + "\n");
+						#term.print(true_word + "\n");
+						
 						if (true_word == typed_word) then
 							num_w_correct=num_w_correct+1;
 							typed_word="";
@@ -275,8 +277,10 @@ begin
 	term.print(string( num_w_correct)+ "\n");
 	int words_score=0;
 	
-	int percent_correct = (num_w_correct/5)*100;	
-	finish_txt.set_caption("You scored " + string(percent_correct) + "%.\n\nPress spacebar to continue");
+	#int percent_correct = (num_w_correct/5)*100;	
+	
+	finish_txt.set_caption("You got " + string(num_w_correct) + " words correct.\n\nPress spacebar to continue");
+	#finish_txt.set_caption("You scored " + string(percent_correct) + "%.\n\nPress spacebar to continue");
 	finish_txt.redraw();
 	finish_trial.present();
 
