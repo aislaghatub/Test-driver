@@ -8,23 +8,41 @@ int status_parameter = parameter_window.add_parameter( "on break" );
 int wordscore = parameter_window.add_parameter( "Words Score" );
 
 # Set-up conditions and trials
+int num_uniq_trials = 205;
 int trials_per_cond = 307;
 int num_conds=2;
 
 int total_trials = trials_per_cond*num_conds;
 array<int> trial_order[total_trials];
+array <int> cond_order[total_trials];
 
 parameter_window.set_parameter(totaltrial_parameter, string(total_trials));
 
+# randomise trials within block to ensure repetitions are at least 'trials_per_cond' mins apart
 loop 
 	int i = 1 
 until 
-	i > total_trials
+	i > trials_per_cond 
 begin
-	trial_order[i] = i;
+	
+	# loop for each condition
+	loop int j=1 until j> num_conds begin
+		cond[j] = i + (j-1)*trials_per_cond;
+		j=j+1;
+	end;		
+	shuffle_order.shuffle(); 
+	
+	loop int j=1 until j> num_conds begin
+		int idx=i+(j-1)*trials_per_cond;
+		trial_order[idx] = cond[shuffle_order[j]];
+		
+		cond_order[idx] = shuffle_order[j];
+		
+		j=j+1;
+	end;
+	
 	i = i + 1;
-end;
-trial_order.shuffle();
+end; 
 
 #Generate array of stimuli names
 array <string> start_pics[total_trials];
@@ -33,7 +51,7 @@ array <string> end_pics[total_trials];
 loop 
 	int i = 1 
 until 
-	i > total_trials 
+	i > num_uniq_trials
 begin
 		start_pics[i] = "crosshair.png";
 		
@@ -48,11 +66,11 @@ end;
 
 #Read in words for intelligiblity test
 int num_words = 5; # per trial
-array <int> words_order[total_trials];
+array <int> words_order[num_uniq_trials];
 loop 
 	int i = 1 
 until 
-	i > total_trials 
+	i > num_uniq_trials 
 begin
 	words_order[i] = trial_order[i]; 
 	i = i + 1;
