@@ -15,6 +15,9 @@ int num_conds=2;
 int total_trials = trials_per_cond*num_conds;
 array<int> trial_order[total_trials];
 array <int> cond_order[total_trials];
+array<int> cond[num_conds];
+array<int> shuffle_order[num_conds];
+shuffle_order.fill(1,num_conds,1,1); #start_index, end_index, start_value, value_step 
 
 parameter_window.set_parameter(totaltrial_parameter, string(total_trials));
 
@@ -51,14 +54,20 @@ array <string> end_pics[total_trials];
 loop 
 	int i = 1 
 until 
-	i > num_uniq_trials
+	i > total_trials
 begin
 		start_pics[i] = "crosshair.png";
-		
-		videos[i] = "s" + string(i) + "_face_audio" + string(i) + string(i+1) + string(i+2) + ".avi";
-		
 		end_pics[i] = "crosshair.png";
-
+		
+		if i >= 1  && i <= num_uniq_trials then
+			videos[i] = "s" + string(i) + "_face_audio" + string(i) + string(i+1) + string(i+2) + ".avi";
+			
+		elseif i > num_uniq_trials  && i <= 2*num_uniq_trials then
+			videos[i] = "s" + string(i-num_uniq_trials) + "_face_audio" + string(i-num_uniq_trials) + string(i+1-num_uniq_trials) + string(i+2-num_uniq_trials) + ".avi";
+					
+		else
+			videos[i] = "s" + string(i-2*num_uniq_trials) + "_face_audio" + string(i-2*num_uniq_trials) + string(i+1-2*num_uniq_trials) + string(i+2-2*num_uniq_trials) + ".avi";
+		end;
 	i = i + 1;
 end;
 
