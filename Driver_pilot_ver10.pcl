@@ -279,7 +279,7 @@ begin
 	
 	#int percent_correct = (num_w_correct/5)*100;	
 	
-	finish_txt.set_caption("You got " + string(num_w_correct) + " words correct.\n\nPress spacebar to continue");
+	finish_txt.set_caption("You got " + string(num_w_correct) + "/5 words correct.\n\nPress spacebar to continue");
 	#finish_txt.set_caption("You scored " + string(percent_correct) + "%.\n\nPress spacebar to continue");
 	finish_txt.redraw();
 	finish_trial.present();

@@ -1,146 +1,90 @@
 Scenario - 
-Logfile written - 11/11/2019 14:15:39
+Logfile written - 11/11/2019 14:22:49
 
 Subject	Trial	Event Type	Code	Time	TTime	Uncertainty	Duration	Uncertainty	ReqTime	ReqDur	Stim Type	Pair Index
 
-t1	1	Response	125	7005	6839	1
-t1	2	Response	125	14845	6012	1
-t1	3	Nothing	126	25000	10000	1			10000		other	0
-t1	4	Video	4	35666	10000	2			10000		other	0
-t1	5	Nothing	127	89912	20000	1			20000		other	0
-t1	5	Text Input	T	106291	36378	0
-t1	5	Text Input	H	107329	37416	0
-t1	5	Text Input	E	108368	38455	0
-t1	5	Text Input	Y	109248	39335	0
-t1	5	Text Input	 	111806	41893	0
-t1	5	Response	125	111806	41893	2
-t1	5	Text Input	S	112765	42853	0
-t1	5	Text Input	A	113405	43493	0
-t1	5	Text Input	N	114845	44933	0
-t1	5	Text Input	G	116769	46856	0
-t1	5	Text Input	 	117886	47973	0
-t1	5	Response	125	117886	47973	1
-t1	5	Text Input	S	119649	49736	0
-t1	5	Text Input	A	120525	50612	0
-t1	5	Text Input	M	122205	52292	0
-t1	5	Text Input	E	123569	53656	0
-t1	5	Text Input	 	124605	54693	0
-t1	5	Response	125	124605	54693	1
-t1	5	Text Input	T	129891	59979	0
-t1	5	Text Input	U	130928	61016	0
-t1	5	Text Input	N	132928	63015	0
-t1	5	Text Input	E	133728	63816	0
-t1	5	Text Input	S	135885	65972	0
-t1	5	Text Input	 	138048	68135	0
-t1	5	Response	125	138048	68135	1
-t1	5	Text Input	A	140047	70134	0
-t1	5	Text Input	T	142048	72135	0
-t1	5	Text Input	 	143969	74056	0
-t1	5	Response	125	143969	74056	1
-t1	5	Text Input	E	153248	83336	0
-t1	5	Text Input	A	155165	85252	0
-t1	5	Text Input	C	156369	86456	0
-t1	5	Text Input	H	157488	87575	0
-t1	5	Text Input	 	159733	89820	0
-t1	5	Response	125	159733	89820	1
-t1	5	Text Input	P	162848	92935	0
-t1	5	Text Input	A	163728	93816	0
-t1	5	Text Input	R	165246	95334	0
-t1	5	Text Input	T	167406	97494	0
-t1	5	Text Input	Y	169248	99336	0
-t1	5	Text Input		177329	107417	0
-t1	6	Response	125	211085	33585	1
-t1	7	Response	125	222849	9849	1
-t1	8	Nothing	126	232999	10000	1			10000		other	0
-t1	9	Video	8	243333	10000	2			10000		other	0
-t1	10	Nothing	127	293240	20000	1			20000		other	0
-t1	10	Text Input	L	297327	24087	0
-t1	10	Text Input	I	300048	26808	0
-t1	10	Text Input	V	303245	30005	0
-t1	10	Text Input	E	304048	30809	0
-t1	10	Text Input	 	305246	32006	0
-t1	10	Response	125	305246	32006	1
-t1	10	Text Input	W	306445	33205	0
-t1	10	Text Input	I	308285	35045	0
-t1	10	Text Input	R	309648	36408	0
-t1	10	Text Input	E	310205	36965	0
-t1	10	Text Input	S	313485	40245	0
-t1	10	Text Input	 	314684	41445	0
-t1	10	Response	125	314684	41445	1
-t1	10	Text Input	S	316447	43207	0
-t1	10	Text Input	H	317964	44725	0
-t1	10	Text Input	O	320046	46806	0
-t1	10	Text Input	U	320608	47368	0
-t1	10	Text Input	L	322928	49688	0
-t1	10	Text Input	D	324045	50805	0
-t1	10	Text Input	 	325168	51928	0
-t1	10	Response	125	325168	51928	1
-t1	10	Text Input	B	326764	53525	0
-t1	10	Text Input	E	327567	54327	0
-t1	10	Text Input	 	328845	55605	0
-t1	10	Response	125	328845	55605	1
-t1	10	Text Input	K	331009	57769	0
-t1	10	Text Input	E	332047	58808	0
-t1	10	Text Input	P	333168	59928	0
-t1	10	Text Input	T	336766	63526	0
-t1	10	Text Input	 	338205	64965	0
-t1	10	Response	125	338205	64965	1
-t1	10	Text Input	C	339808	66568	0
-t1	10	Text Input	O	340525	67285	0
-t1	10	Text Input	V	342366	69126	0
-t1	10	Text Input	E	343726	70486	0
-t1	10	Text Input	R	344928	71688	0
-t1	10	Text Input	E	346125	72885	0
-t1	10	Text Input	D	349089	75849	0
-t1	10	Text Input		363088	89848	0
-t1	11	Response	125	374445	11279	1
-t1	12	Response	125	382448	5615	1
-t1	13	Nothing	126	392499	10000	1			10000		other	0
-t1	14	Video	6	402832	10000	2			10000		other	0
-t1	15	Nothing	127	453410	20000	1			20000		other	0
-t1	15	Text Input	W	461168	27758	0
-t1	15	Text Input	A	463004	29594	0
-t1	15	Text Input	R	464685	31275	0
-t1	15	Text Input	 	466126	32716	0
-t1	15	Response	125	466126	32716	1
-t1	15	Text Input	I	468525	35115	0
-t1	15	Text Input	S	469732	36322	0
-t1	15	Text Input	 	470845	37435	0
-t1	15	Response	125	470845	37435	1
-t1	15	Text Input	E	472284	38875	0
-t1	15	Text Input	N	473172	39763	0
-t1	15	Text Input	O	475165	41755	0
-t1	15	Text Input	U	475806	42396	0
-t1	15	Text Input	G	477328	43919	0
-t1	15	Text Input	H	478288	44878	0
-t1	15	Text Input	 	480364	46955	0
-t1	15	Response	125	480364	46955	1
-t1	15	Text Input	O	482129	48719	0
-t1	15	Text Input	N	482685	49275	0
-t1	15	Text Input	E	483647	50237	0
-t1	15	Text Input		488525	55115	0
-t1	16	Response	125	503086	14420	1
-t1	17	Quit		516454	11121	NA
+t1	1	Response	125	10913	10747	2
+t1	2	Response	125	18593	5760	1
+t1	3	Nothing	126	28666	10000	1			10000		other	0
+t1	4	Video	10	39000	10000	2			10000		other	0
+t1	5	Nothing	127	94910	20000	1			20000		other	0
+t1	5	Text Input	S	102589	27679	0
+t1	5	Text Input	A	103470	28560	0
+t1	5	Text Input	L	105149	30239	0
+t1	5	Text Input	T	108033	33123	0
+t1	5	Text Input		112752	37842	0
+t1	6	Response	125	161871	49038	1
+t1	7	Response	125	168110	4611	1
+t1	8	Nothing	126	178166	10000	1			10000		other	0
+t1	9	Video	9	188499	10000	2			10000		other	0
+t1	10	Nothing	127	241738	20000	1			20000		other	0
+t1	10	Text Input	P	249391	27654	0
+t1	10	Text Input	A	250753	29015	0
+t1	10	Text Input	C	252911	31173	0
+t1	10	Text Input	K	254032	32294	0
+t1	10	Text Input	 	256113	34375	0
+t1	10	Response	125	256113	34375	1
+t1	10	Text Input	H	258189	36452	0
+t1	10	Response	120	266751	45013	1
+t1	10	Text Input	T	268669	46931	0
+t1	10	Text Input	H	270113	48375	0
+t1	10	Text Input	E	271072	49334	0
+t1	10	Text Input	 	272193	50455	0
+t1	10	Response	125	272193	50455	1
+t1	10	Text Input	K	273952	52214	0
+t1	10	Text Input	I	277949	56211	0
+t1	10	Text Input	T	279310	57572	0
+t1	10	Text Input	S	287873	66135	0
+t1	10	Text Input	 	289229	67491	0
+t1	10	Response	125	289229	67491	1
+t1	10	Text Input	A	290271	68533	0
+t1	10	Text Input	N	291232	69494	0
+t1	10	Text Input	D	292352	70614	0
+t1	10	Text Input	 	293392	71655	0
+t1	10	Response	125	293392	71655	1
+t1	10	Text Input	D	295072	73334	0
+t1	10	Text Input	O	297553	75815	0
+t1	10	Text Input	N	299711	77974	0
+t1	10	Text Input	'	304591	82853	0
+t1	10	Text Input	T	305469	83731	0
+t1	10	Text Input	 	307792	86055	0
+t1	10	Response	125	307792	86055	1
+t1	10	Text Input	F	313633	91895	0
+t1	10	Text Input	O	315392	93654	0
+t1	10	Text Input	R	316112	94374	0
+t1	10	Text Input	G	317709	95971	0
+t1	10	Text Input	E	318589	96851	0
+t1	10	Text Input	T	319709	97971	0
+t1	10	Text Input	 	320748	99011	0
+t1	10	Response	125	320748	99011	1
+t1	10	Text Input	T	321629	99891	0
+t1	10	Text Input	H	322669	100931	0
+t1	10	Text Input	E	323390	101652	0
+t1	10	Text Input	 	324829	103091	0
+t1	10	Response	125	324829	103091	1
+t1	10	Text Input	S	328913	107175	0
+t1	10	Text Input	A	329630	107893	0
+t1	10	Text Input	L	331309	109571	0
+t1	10	Text Input	T	332989	111251	0
+t1	10	Text Input		336672	114934	0
+t1	11	Response	125	349870	13037	1
+t1	12	Quit		357553	5220	NA
 
 
 video summary
 filename	start frame	end frame	frames presented	frames dropped	start time	end time	duration
-E:\Aisling\Test driver\Videos\s4_face_audio456.avi	1	169	169	0	35666	69833	34167
-E:\Aisling\Test driver\Videos\s8_face_audio8910.avi	1	147	147	0	243333	273166	29833
-E:\Aisling\Test driver\Videos\s6_face_audio678.avi	1	150	150	0	402832	433332	30500
+E:\Aisling\Test driver\Videos\s10_face_audio101112.avi	1	177	177	0	39000	74833	35833
+E:\Aisling\Test driver\Videos\s9_face_audio91011.avi	1	164	164	0	188499	221666	33167
 
 
 Event Type	Code	Type	Response	RT	RT Uncertainty	Time	Uncertainty	Duration	Uncertainty	ReqTime	ReqDur
 
-Nothing	126	other				25000	1			10000
-Video	4	other				35666	2			10000
-Nothing	127	other				89912	1			20000
-Nothing	126	other				232999	1			10000
-Video	8	other				243333	2			10000
-Nothing	127	other				293240	1			20000
-Nothing	126	other				392499	1			10000
-Video	6	other				402832	2			10000
-Nothing	127	other				453410	1			20000
+Nothing	126	other				28666	1			10000
+Video	10	other				39000	2			10000
+Nothing	127	other				94910	1			20000
+Nothing	126	other				178166	1			10000
+Video	9	other				188499	2			10000
+Nothing	127	other				241738	1			20000
 
 
 {
@@ -154,5 +98,5 @@ Nothing	127	other				453410	1			20000
    },
    "scenario": "Driver_pilot_ver10.sce",
    "subject": "t1",
-   "timestamp": "2019/11/11 19:14:46 GMT"
+   "timestamp": "2019/11/11 19:22:12 GMT"
 }
