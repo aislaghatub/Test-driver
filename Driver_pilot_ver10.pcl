@@ -8,9 +8,11 @@ int status_parameter = parameter_window.add_parameter( "on break" );
 int wordscore = parameter_window.add_parameter( "Words Score" );
 
 # Set-up conditions and trials
-int total_trials = 205;
+int trials_per_cond = 307;
+int num_conds=2;
+
+int total_trials = trials_per_cond*num_conds;
 array<int> trial_order[total_trials];
-array<int> conds[2];
 
 parameter_window.set_parameter(totaltrial_parameter, string(total_trials));
 
