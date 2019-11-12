@@ -1,10 +1,8 @@
 Scenario - 
-Logfile written - 11/12/2019 16:01:30
+Logfile written - 11/12/2019 15:38:21
 
 Subject	Trial	Event Type	Code	Time	TTime	Uncertainty	Duration	Uncertainty	ReqTime	ReqDur	Stim Type	Pair Index
 
-t	1	Response	125	9609	9276	1
-t	2	Quit		14731	3543	NA
 
 
 Event Type	Code	Type	Response	RT	RT Uncertainty	Time	Uncertainty	Duration	Uncertainty	ReqTime	ReqDur
@@ -21,6 +19,6 @@ Event Type	Code	Type	Response	RT	RT Uncertainty	Time	Uncertainty	Duration	Uncert
       "configuration": "Default configuration"
    },
    "scenario": "Driver_pilot_ver10.sce",
-   "subject": "t",
-   "timestamp": "2019/11/12 21:01:27 GMT"
+   "subject": "",
+   "timestamp": "2019/11/12 20:38:20 GMT"
 }
