@@ -13,7 +13,8 @@ int trials_per_cond = 307;
 int num_conds = 2;
 int num_reps = 3;
 
-int total_trials = trials_per_cond*num_conds;
+int total_trials = trials_per_cond*num_conds+1; # +1 so that number of total_trials is divisable by num_reps
+
 array<int> trial_order[total_trials];
 array <int> cond_order[total_trials];
 array <int> vid_order[total_trials];
@@ -29,11 +30,9 @@ parameter_window.set_parameter(totaltrial_parameter, string(total_trials));
 array <string> start_pics[total_trials];
 array <string> videos[total_trials];
 array <string> end_pics[total_trials];
-loop 
-	int i = 1 
-until 
-	i > total_trials
-begin
+
+loop int i = 1 until i >= total_trials begin
+	
 		start_pics[i] = "crosshair.png";
 		end_pics[i] = "crosshair.png";
 		
@@ -49,50 +48,41 @@ begin
 	i = i + 1;
 end;
 
-#term.print( videos );
-
-
 # randomise trials within block to ensure repetitions are at least 'trials_per_cond' mins apart
-loop 
-	int i = 1 
-until 
-	i > total_trials 
-begin
+loop int i = 1 until i > num_uniq_trials begin
 	
 	# loop for each condition
 	loop int j=1 until j>num_reps begin
 		
 		block[j] = i + (j-1)*num_uniq_trials;
-		# term.print(string(cond[j]) + "\n");
 		j=j+1;
 	end;		
 	shuffle_order.shuffle(); 
 	
 	loop int j=1 until j>num_reps begin
-		
+	
 		int idx = i + (j-1)*num_uniq_trials;
-		term.print(string(idx) + "\n");
+		#term.print(string(idx) + "\n");
 		
 		trial_order[idx] = block[shuffle_order[j]];
-		term.print(string(trial_order[idx]) + "\n");
-		
-		
+		#term.print(string(trial_order[idx]) + "\n");
+
 		# NB counterbalance this across subjects!!
 		if trial_order[idx] > total_trials/2 then
 			cond_order[idx] = 2;
 		else
 			cond_order[idx] = 1;
 		end;	
-		term.print(string(cond_order[idx]) + "\n");
+		#term.print(string(cond_order[idx]) + "\n");
 		
 		if i <= num_uniq_trials then
 			vid_order[idx] = i;
 		elseif i > num_uniq_trials && i <= 2*num_uniq_trials then
-			vid_order[idx] = i-num_uniq_trials-1;
+			vid_order[idx] = i-num_uniq_trials;
 		else
-			vid_order[idx] = i-2*num_uniq_trials-1;
+			vid_order[idx] = i-2*num_uniq_trials;
 		end;
-		term.print(string(vid_order[idx]) + "\n");
+		#term.print(string(vid_order[idx]) + "\n");
 		
 		j=j+1;
 	end;
@@ -115,11 +105,8 @@ end;
 #Read in words for intelligiblity test
 int num_words = 5; # per trial
 array <int> words_order[num_uniq_trials];
-loop 
-	int i = 1 
-until 
-	i > num_uniq_trials 
-begin
+
+loop int i = 1 until i > num_uniq_trials begin
 	words_order[i] = i; 
 	i = i + 1;
 end;
@@ -129,13 +116,10 @@ end;
 #Output trial order
 output_file out1 = new output_file; 
 out1.open( logfile.subject() + "-trial_order.txt" ); 
-out1.print( "Run\tTrial\tCond\tVid\n " ); 
-loop 
-	int i = 1 
-until 
-	i > total_trials 
-begin
-	out1.print( string(i) + "\t" + string(trial_order[i]) + "\t" + string(cond_order[i])  + "\t" + string(vid_order[i])); 
+out1.print( "Run\tTrial\tCond\tVid\n" ); 
+
+loop int i = 1 until i > total_trials begin
+	out1.print(string(i) + "\t" + string(trial_order[i]) + "\t" + string(cond_order[i])  + "\t" + string(vid_order[i]) + "\n"); 
 	i = i + 1;
 end;
 out1.close();
@@ -157,18 +141,13 @@ int run;
 begin_trl.present();
 
 #Loop through all trials
-loop 
-	int i = 1
-until 
-	i > num_uniq_trials #total_trials 
-begin
+loop int i = 1 until i > total_trials begin
 	
 	parameter_window.set_parameter(trial_parameter, string(i));
 	
 	#Define trial and target index
 	run = trial_order[i];
-	
-	
+
 	int word = words_order[i];
 	array<string> true_words[num_words];
 	#term.print(word);
@@ -177,11 +156,8 @@ begin
 	input_file wrds = new input_file; 
 	wrds.open( "E://Aisling//Test driver//keywords//keywords_" + string(word) + ".txt" ); 
 	wrds.set_delimiter( '\t' ); 
-   loop 
-		int j = 1
-	until 
-		j > num_words
-	begin
+   loop int j = 1	until j > num_words begin
+	
 		string curr_word = wrds.get_string();
 		words4pic[j].set_caption( curr_word );
 		words4pic[j].redraw();
@@ -245,10 +221,7 @@ begin
 
 	system_keyboard.set_time_out(10);
 
-	loop 
-		until 
-			false
-	begin
+	loop until false begin
 		
 		 bool do_set_caption = false;
 		
