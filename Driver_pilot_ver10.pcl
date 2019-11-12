@@ -56,7 +56,7 @@ end;
 loop 
 	int i = 1 
 until 
-	i > num_uniq_trials 
+	i > total_trials 
 begin
 	
 	# loop for each condition
@@ -76,6 +76,8 @@ begin
 		trial_order[idx] = block[shuffle_order[j]];
 		term.print(string(trial_order[idx]) + "\n");
 		
+		
+		# NB counterbalance this across subjects!!
 		if trial_order[idx] > total_trials/2 then
 			cond_order[idx] = 2;
 		else
@@ -85,8 +87,10 @@ begin
 		
 		if i <= num_uniq_trials then
 			vid_order[idx] = i;
-		else
+		elseif i > num_uniq_trials && i <= 2*num_uniq_trials then
 			vid_order[idx] = i-num_uniq_trials-1;
+		else
+			vid_order[idx] = i-2*num_uniq_trials-1;
 		end;
 		term.print(string(vid_order[idx]) + "\n");
 		
