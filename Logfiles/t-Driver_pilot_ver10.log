@@ -1,14 +1,315 @@
 Scenario - 
-Logfile written - 11/13/2019 08:23:07
+Logfile written - 11/13/2019 08:41:30
 
 Subject	Trial	Event Type	Code	Time	TTime	Uncertainty	Duration	Uncertainty	ReqTime	ReqDur	Stim Type	Pair Index
 
-t	1	Response	125	9052	8886	1
-t	2	Quit		14733	4046	NA
+t	1	Response	125	8044	7711	2
+t	2	Response	125	16925	6425	1
+t	3	Nothing	126	20000	3000	1			3000		other	0
+t	4	Nothing	98	23000	3000	1			3000		other	0
+t	5	Video	206	26333	3000	2			3000		other	0
+t	6	Nothing	99	61074	3000	1			3000		other	0
+t	7	Nothing	127	64075	3000	1			3000		other	0
+t	8	Response	125	69325	5159	1
+t	9	Response	125	77409	5409	1
+t	10	Nothing	126	80500	3000	1			3000		other	0
+t	11	Nothing	98	83500	3000	1			3000		other	0
+t	12	Video	412	86833	3000	2			3000		other	0
+t	13	Nothing	99	120073	3000	1			3000		other	0
+t	14	Nothing	127	123074	3000	1			3000		other	0
+t	15	Response	125	129724	6558	1
+t	16	Response	125	137005	4005	1
+t	17	Nothing	126	140166	3000	1			3000		other	0
+t	18	Nothing	98	143167	3000	1			3000		other	0
+t	19	Video	3	146499	3000	2			3000		other	0
+t	20	Nothing	99	180741	3000	1			3000		other	0
+t	21	Nothing	127	183741	3000	1			3000		other	0
+t	22	Response	125	189884	6052	1
+t	23	Response	125	196366	3366	1
+t	24	Nothing	126	199499	3000	1			3000		other	0
+t	25	Nothing	98	202500	3000	1			3000		other	0
+t	26	Video	209	205833	3000	1			3000		other	0
+t	27	Nothing	99	243083	3000	1			3000		other	0
+t	28	Nothing	127	246084	3000	1			3000		other	0
+t	29	Response	125	250684	4518	1
+t	30	Response	125	256684	3185	1
+t	31	Nothing	126	259832	3000	1			3000		other	0
+t	32	Nothing	98	262833	3000	1			3000		other	0
+t	33	Video	415	266166	3000	2			3000		other	0
+t	34	Nothing	99	302907	3000	1			3000		other	0
+t	35	Nothing	127	305908	3000	1			3000		other	0
+t	36	Response	125	310124	4125	1
+t	37	Response	125	315966	2800	1
+t	38	Nothing	126	318999	3000	1			3000		other	0
+t	39	Nothing	98	321999	3000	1			3000		other	0
+t	40	Video	211	325332	3000	1			3000		other	0
+t	41	Nothing	99	358743	3000	1			3000		other	0
+t	42	Nothing	127	361743	3000	1			3000		other	0
+t	43	Response	125	366604	4772	1
+t	44	Response	125	372204	3039	1
+t	45	Nothing	126	375332	3000	1			3000		other	0
+t	46	Nothing	98	378333	3000	2			3000		other	0
+t	47	Video	212	381665	3000	2			3000		other	0
+t	48	Nothing	99	418238	3000	1			3000		other	0
+t	49	Nothing	127	421239	3000	1			3000		other	0
+t	50	Response	125	434524	13192	1
+t	51	Response	125	452844	14679	1
+t	52	Nothing	126	455999	3000	1			3000		other	0
+t	53	Nothing	98	458999	3000	1			3000		other	0
+t	54	Video	8	462332	3000	1			3000		other	0
+t	55	Nothing	99	495242	3000	2			3000		other	0
+t	56	Nothing	127	498243	3000	1			3000		other	0
+t	57	Response	125	508125	9793	1
+t	58	Response	125	514604	3772	1
+t	59	Nothing	126	517665	3000	1			3000		other	0
+t	60	Nothing	98	520666	3000	1			3000		other	0
+t	61	Video	9	523998	3000	2			3000		other	0
+t	62	Nothing	99	560240	3000	1			3000		other	0
+t	63	Nothing	127	563241	3000	1			3000		other	0
+t	64	Response	125	575243	11912	2
+t	65	Response	125	583163	4998	1
+t	66	Nothing	126	586331	3000	1			3000		other	0
+t	67	Nothing	98	589332	3000	1			3000		other	0
+t	68	Video	10	592665	3000	2			3000		other	0
+t	69	Nothing	99	631591	3000	1			3000		other	0
+t	70	Nothing	127	634592	3000	1			3000		other	0
+t	71	Response	125	641006	6341	1
+t	72	Response	125	647084	3086	2
+t	73	Nothing	126	650165	3000	1			3000		other	0
+t	74	Nothing	98	653165	3000	1			3000		other	0
+t	75	Video	216	656498	3000	2			3000		other	0
+t	76	Nothing	99	690406	3000	1			3000		other	0
+t	77	Nothing	127	693407	3000	1			3000		other	0
+t	78	Response	125	697483	3985	1
+t	79	Response	125	709963	9465	1
+t	80	Nothing	126	712998	3000	1			3000		other	0
+t	81	Nothing	98	715998	3000	1			3000		other	0
+t	82	Video	422	719331	3000	2			3000		other	0
+t	83	Nothing	99	753575	3000	1			3000		other	0
+t	84	Nothing	127	756575	3000	1			3000		other	0
+t	85	Response	125	761163	4499	1
+t	86	Response	125	767483	3319	1
+t	87	Nothing	126	770664	3000	1			3000		other	0
+t	88	Nothing	98	773665	3000	1			3000		other	0
+t	89	Video	218	776998	3000	2			3000		other	0
+t	90	Nothing	99	815906	3000	1			3000		other	0
+t	91	Nothing	127	818907	3000	1			3000		other	0
+t	92	Response	125	823166	4169	2
+t	93	Response	125	829643	2812	1
+t	94	Nothing	126	832831	3000	1			3000		other	0
+t	95	Nothing	98	835831	3000	1			3000		other	0
+t	96	Video	14	839164	3000	1			3000		other	0
+t	97	Nothing	99	873236	3000	1			3000		other	0
+t	98	Nothing	127	876237	3000	1			3000		other	0
+t	98	Text Input	W	918363	45126	0
+t	98	Text Input	E	919162	45926	0
+t	98	Text Input	 	920764	47528	0
+t	98	Response	125	920764	47528	1
+t	98	Text Input	D	921962	48726	0
+t	98	Text Input	O	923002	49766	0
+t	98	Text Input	N	924451	51215	0
+t	98	Text Input	T	925722	52485	0
+t	98	Text Input	 	926603	53367	0
+t	98	Response	125	926603	53367	1
+t	98	Text Input	L	928522	55286	0
+t	98	Text Input	I	930042	56806	0
+t	98	Text Input	K	931962	58725	0
+t	98	Text Input	E	933163	59927	0
+t	98	Response	120	939162	65926	1
+t	98	Response	120	940523	67286	1
+t	98	Response	120	941883	68647	1
+t	98	Response	120	943163	69926	1
+t	98	Response	120	944602	71366	1
+t	98	Response	120	948525	75289	1
+t	98	Text Input	'	953243	80006	0
+t	98	Text Input	T	960203	86966	0
+t	98	Text Input	 	961963	88727	0
+t	98	Response	125	961963	88727	1
+t	98	Text Input	L	962763	89527	0
+t	98	Text Input	I	964282	91045	0
+t	98	Text Input	K	966122	92885	0
+t	98	Text Input	E	966842	93606	0
+t	98	Text Input	 	968362	95126	0
+t	98	Response	125	968362	95126	1
+t	98	Text Input	T	969243	96007	0
+t	98	Text Input	O	970042	96805	0
+t	98	Text Input	 	971965	98728	0
+t	98	Response	125	971965	98728	1
+t	98	Text Input	A	974602	101366	0
+t	98	Text Input	D	976363	103126	0
+t	98	Text Input	M	979242	106006	0
+t	98	Text Input	I	980602	107365	0
+t	98	Text Input	T	981562	108325	0
+t	98	Text Input	 	983162	109926	0
+t	98	Response	125	983162	109926	1
+t	98	Text Input	S	987563	114327	0
+t	98	Text Input	M	988522	115285	0
+t	98	Text Input	A	989642	116405	0
+t	98	Text Input	L	990442	117206	0
+t	98	Text Input	L	991802	118566	0
+t	98	Text Input	 	992683	119446	0
+t	98	Response	125	992683	119446	1
+t	98	Text Input	F	999242	126006	0
+t	98	Text Input	A	999882	126646	0
+t	98	Text Input	U	1001721	128485	0
+t	98	Text Input	L	1003962	130726	0
+t	98	Text Input	T	1004522	131286	0
+t	98	Text Input	S	1006444	133208	0
+t	98	Text Input		1007962	134725	0
+t	99	Response	125	1016204	8040	1
+t	100	Response	125	1025082	5918	1
+t	101	Nothing	126	1028164	3000	1			3000		other	0
+t	102	Nothing	98	1031164	3000	1			3000		other	0
+t	103	Video	15	1034497	3000	1			3000		other	0
+t	104	Nothing	99	1067236	3000	1			3000		other	0
+t	105	Nothing	127	1070237	3000	1			3000		other	0
+t	106	Response	125	1095403	25073	2
+t	107	Response	125	1102282	3952	1
+t	108	Nothing	126	1105330	3000	1			3000		other	0
+t	109	Nothing	98	1108331	3000	1			3000		other	0
+t	110	Video	426	1111663	3000	2			3000		other	0
+t	111	Nothing	99	1145741	3000	1			3000		other	0
+t	112	Nothing	127	1148742	3000	1			3000		other	0
+t	113	Response	125	1153162	4332	1
+t	114	Response	125	1159242	3412	1
+t	115	Nothing	126	1162330	3000	1			3000		other	0
+t	116	Nothing	98	1165331	3000	1			3000		other	0
+t	117	Video	427	1168663	3000	1			3000		other	0
+t	118	Nothing	99	1203734	3000	1			3000		other	0
+t	119	Nothing	127	1206735	3000	1			3000		other	0
+t	120	Response	125	1210922	4092	1
+t	121	Response	125	1216842	2845	1
+t	122	Nothing	126	1219997	3000	1			3000		other	0
+t	123	Nothing	98	1222998	3000	1			3000		other	0
+t	124	Video	18	1226330	3000	2			3000		other	0
+t	125	Nothing	99	1261571	3000	1			3000		other	0
+t	126	Nothing	127	1264571	3000	1			3000		other	0
+t	127	Response	125	1268842	4179	1
+t	128	Response	125	1273883	2386	1
+t	129	Nothing	126	1276997	3000	1			3000		other	0
+t	130	Nothing	98	1279997	3000	1			3000		other	0
+t	131	Video	224	1283330	3000	2			3000		other	0
+t	131	Quit		1301882	21552	NA
+
+
+video summary
+filename	start frame	end frame	frames presented	frames dropped	start time	end time	duration
+E:\Aisling\Test driver\Videos\s1_face_audio123.avi	1	156	156	0	26333	58000	31667
+E:\Aisling\Test driver\Videos\s2_face_audio234.avi	1	149	149	0	86833	116999	30167
+E:\Aisling\Test driver\Videos\s3_face_audio345.avi	1	154	154	0	146499	177666	31167
+E:\Aisling\Test driver\Videos\s4_face_audio456.avi	1	169	169	0	205833	239999	34167
+E:\Aisling\Test driver\Videos\s5_face_audio567.avi	1	166	166	0	266166	299832	33667
+E:\Aisling\Test driver\Videos\s6_face_audio678.avi	1	150	150	0	325332	355665	30333
+E:\Aisling\Test driver\Videos\s7_face_audio789.avi	1	165	165	0	381665	415165	33500
+E:\Aisling\Test driver\Videos\s8_face_audio8910.avi	1	147	147	0	462332	492165	29833
+E:\Aisling\Test driver\Videos\s9_face_audio91011.avi	1	164	164	0	523998	557165	33167
+E:\Aisling\Test driver\Videos\s10_face_audio101112.avi	1	177	177	0	592665	628498	35833
+E:\Aisling\Test driver\Videos\s11_face_audio111213.avi	1	152	152	0	656498	687331	30833
+E:\Aisling\Test driver\Videos\s12_face_audio121314.avi	1	154	154	0	719331	750498	31167
+E:\Aisling\Test driver\Videos\s13_face_audio131415.avi	1	177	177	0	776998	812831	35833
+E:\Aisling\Test driver\Videos\s14_face_audio141516.avi	1	153	153	0	839164	870164	31000
+E:\Aisling\Test driver\Videos\s15_face_audio151617.avi	1	146	146	0	1034497	1064164	29667
+E:\Aisling\Test driver\Videos\s16_face_audio161718.avi	1	153	153	0	1111663	1142664	31000
+E:\Aisling\Test driver\Videos\s17_face_audio171819.avi	1	158	158	0	1168663	1200663	32000
+E:\Aisling\Test driver\Videos\s18_face_audio181920.avi	1	159	159	0	1226330	1258497	32167
+E:\Aisling\Test driver\Videos\s19_face_audio192021.avi	1	92	92	0	1283330	1301830	18500
 
 
 Event Type	Code	Type	Response	RT	RT Uncertainty	Time	Uncertainty	Duration	Uncertainty	ReqTime	ReqDur
 
+Nothing	126	other				20000	1			3000
+Nothing	98	other				23000	1			3000
+Video	206	other				26333	2			3000
+Nothing	99	other				61074	1			3000
+Nothing	127	other				64075	1			3000
+Nothing	126	other				80500	1			3000
+Nothing	98	other				83500	1			3000
+Video	412	other				86833	2			3000
+Nothing	99	other				120073	1			3000
+Nothing	127	other				123074	1			3000
+Nothing	126	other				140166	1			3000
+Nothing	98	other				143167	1			3000
+Video	3	other				146499	2			3000
+Nothing	99	other				180741	1			3000
+Nothing	127	other				183741	1			3000
+Nothing	126	other				199499	1			3000
+Nothing	98	other				202500	1			3000
+Video	209	other				205833	1			3000
+Nothing	99	other				243083	1			3000
+Nothing	127	other				246084	1			3000
+Nothing	126	other				259832	1			3000
+Nothing	98	other				262833	1			3000
+Video	415	other				266166	2			3000
+Nothing	99	other				302907	1			3000
+Nothing	127	other				305908	1			3000
+Nothing	126	other				318999	1			3000
+Nothing	98	other				321999	1			3000
+Video	211	other				325332	1			3000
+Nothing	99	other				358743	1			3000
+Nothing	127	other				361743	1			3000
+Nothing	126	other				375332	1			3000
+Nothing	98	other				378333	2			3000
+Video	212	other				381665	2			3000
+Nothing	99	other				418238	1			3000
+Nothing	127	other				421239	1			3000
+Nothing	126	other				455999	1			3000
+Nothing	98	other				458999	1			3000
+Video	8	other				462332	1			3000
+Nothing	99	other				495242	2			3000
+Nothing	127	other				498243	1			3000
+Nothing	126	other				517665	1			3000
+Nothing	98	other				520666	1			3000
+Video	9	other				523998	2			3000
+Nothing	99	other				560240	1			3000
+Nothing	127	other				563241	1			3000
+Nothing	126	other				586331	1			3000
+Nothing	98	other				589332	1			3000
+Video	10	other				592665	2			3000
+Nothing	99	other				631591	1			3000
+Nothing	127	other				634592	1			3000
+Nothing	126	other				650165	1			3000
+Nothing	98	other				653165	1			3000
+Video	216	other				656498	2			3000
+Nothing	99	other				690406	1			3000
+Nothing	127	other				693407	1			3000
+Nothing	126	other				712998	1			3000
+Nothing	98	other				715998	1			3000
+Video	422	other				719331	2			3000
+Nothing	99	other				753575	1			3000
+Nothing	127	other				756575	1			3000
+Nothing	126	other				770664	1			3000
+Nothing	98	other				773665	1			3000
+Video	218	other				776998	2			3000
+Nothing	99	other				815906	1			3000
+Nothing	127	other				818907	1			3000
+Nothing	126	other				832831	1			3000
+Nothing	98	other				835831	1			3000
+Video	14	other				839164	1			3000
+Nothing	99	other				873236	1			3000
+Nothing	127	other				876237	1			3000
+Nothing	126	other				1028164	1			3000
+Nothing	98	other				1031164	1			3000
+Video	15	other				1034497	1			3000
+Nothing	99	other				1067236	1			3000
+Nothing	127	other				1070237	1			3000
+Nothing	126	other				1105330	1			3000
+Nothing	98	other				1108331	1			3000
+Video	426	other				1111663	2			3000
+Nothing	99	other				1145741	1			3000
+Nothing	127	other				1148742	1			3000
+Nothing	126	other				1162330	1			3000
+Nothing	98	other				1165331	1			3000
+Video	427	other				1168663	1			3000
+Nothing	99	other				1203734	1			3000
+Nothing	127	other				1206735	1			3000
+Nothing	126	other				1219997	1			3000
+Nothing	98	other				1222998	1			3000
+Video	18	other				1226330	2			3000
+Nothing	99	other				1261571	1			3000
+Nothing	127	other				1264571	1			3000
+Nothing	126	other				1276997	1			3000
+Nothing	98	other				1279997	1			3000
+Video	224	other				1283330	2			3000
 
 
 {
@@ -22,5 +323,5 @@ Event Type	Code	Type	Response	RT	RT Uncertainty	Time	Uncertainty	Duration	Uncert
    },
    "scenario": "Driver_pilot_ver10.sce",
    "subject": "t",
-   "timestamp": "2019/11/13 13:23:05 GMT"
+   "timestamp": "2019/11/13 13:39:19 GMT"
 }
