@@ -1,3 +1,6 @@
+## ------ COUNTERBALANCE TRIALS THAT ARE IN EACH CONDITION ACROSS PARTICIPANTS ------ ##
+# See Line68
+
 # define parameters to view during experiment
 parameter_window.remove_all();
 int trial_parameter = parameter_window.add_parameter( "trial number" );
@@ -93,7 +96,7 @@ first_shuffle.fill(1,num_uniq_trials,1,1);
 array<int> behav_trials[total_trials]; # where to store the trial nums on which we will ask behavior
 behav_trials.fill(1,total_trials,0,0); #start_index, end_index, start_value, value_step 
 
-# pick 30 random numers from the full set
+# shuffle video numbers
 first_shuffle.shuffle();
 
 loop int i=1 until i>90 begin	
@@ -117,8 +120,6 @@ loop int i = 1 until i > num_uniq_trials begin
 	words_order[i] = i; 
 	i = i + 1;
 end;
-#term.print(words_order);
-
 
 #Output trial order
 output_file out1 = new output_file; 
@@ -131,7 +132,6 @@ loop int i = 1 until i > total_trials begin
 end;
 out1.close();
 
-
 #Output subjects score for intelligibility rating
 output_file out2 = new output_file;
 out2.open( logfile.subject() + "-behav_score.txt" ); 
@@ -142,7 +142,6 @@ out3.open( logfile.subject() + "-typed_words.txt" );
 
 #Define trial variables
 int run;
-
 
 #---------------------------------START EXPERIMENT-------------------------------------------#
 begin_trl.present();
@@ -157,25 +156,26 @@ loop int i = 1 until i > total_trials begin
 
 	int word = words_order[i];
 	array<string> true_words[num_words];
-	#term.print(word);
 	
-	# load words to present
-	input_file wrds = new input_file; 
-	wrds.open( "E://Aisling//Test driver//keywords//keywords_" + string(word) + ".txt" ); 
-	wrds.set_delimiter( '\t' ); 
-   loop int j = 1	until j > num_words begin
+	if behav_trials[i] == 1 then
 	
-		string curr_word = wrds.get_string();
-		words4pic[j].set_caption( curr_word );
-		words4pic[j].redraw();
-		true_words[j]=curr_word;
+		# load words for this trial - if its a behavior trial
+		input_file wrds = new input_file; 
+		wrds.open( "E://Aisling//Test driver//keywords//keywords_" + string(word) + ".txt" ); 
+		wrds.set_delimiter( '\t' ); 
+		loop int j = 1	until j > num_words begin
 		
-		#term.print(true_words[j]);
-		
-		j = j + 1;
+			string curr_word = wrds.get_string();
+			words4pic[j].set_caption( curr_word );
+			words4pic[j].redraw();
+			true_words[j]=curr_word;
+			
+			#term.print(true_words[j]);
+			
+			j = j + 1;
+		end;
+		wrds.close();
 	end;
-	wrds.close();
-	
 	
 
 #************************************************************************************************
@@ -189,8 +189,11 @@ loop int i = 1 until i > total_trials begin
 	if run > total_trials/num_conds then
 		vid.set_x(600); # put video on right
 	end;
+	
 	stim_event.set_event_code( string(run) );
-	stim_event.set_port_code( trial_order[i] );
+	# use modulus so never send port code greater than 95 	 
+	stim_event.set_port_code( mod(trial_order[i], 95)  );
+	
 	default_end_pic.set_filename( end_pics[run] ); default_end_pic.load();
 	vid.prepare();
 	
@@ -215,6 +218,7 @@ loop int i = 1 until i > total_trials begin
 	vid.set_x(-600); # return video to default position 
 #****************************************************************************************
 
+if behav_trials[i] == 1 then
 	#Use get input and show what was typed after pressing enter
 	instruc_text.set_caption( "Type each word you heard in the previous trial \n\n Press Enter when done" );
 	instruc_text.redraw();
@@ -339,13 +343,12 @@ loop int i = 1 until i > total_trials begin
 	#int percent_correct = (num_w_correct/5)*100;	
 	
 	finish_txt.set_caption("You got " + string(num_w_correct) + "/5 words correct.\n\nPress spacebar to continue");
-	#finish_txt.set_caption("You scored " + string(percent_correct) + "%.\n\nPress spacebar to continue");
 	finish_txt.redraw();
 	finish_trial.present();
-
 	
 	#Output subjects score
 	out2.print( string(i) + "\t" + string(trial_order[i]) + "\t" + caption + "\n" );
+end;
 		
 	#Present finish trial at end
 	if i == total_trials then
