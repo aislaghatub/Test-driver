@@ -59,9 +59,8 @@ loop int i = 1 until i > num_uniq_trials begin
 	loop int j=1 until j>num_reps begin
 	
 		int idx = i + (j-1)*num_uniq_trials;
-		#term.print(string(idx) + "\n");		
+		
 		trial_order[idx] = block[shuffle_order[j]];
-		#term.print(string(trial_order[idx]) + "\n");
 
 		# NB counterbalance this across subjects!!
 		if trial_order[idx] > total_trials/2 then
@@ -69,7 +68,6 @@ loop int i = 1 until i > num_uniq_trials begin
 		else
 			cond_order[idx] = 1;
 		end;	
-		#term.print(string(cond_order[idx]) + "\n");
 		
 		if i <= num_uniq_trials then
 			vid_order[idx] = i;
@@ -78,27 +76,12 @@ loop int i = 1 until i > num_uniq_trials begin
 		else
 			vid_order[idx] = i-2*num_uniq_trials;
 		end;
-		#term.print(string(vid_order[idx]) + "\n");
 		
 		j=j+1;
 	end;
 	
 	i = i + 1;
 end; 
-
-# subroutine for removing elements from an array
-sub remove( array<int, 1>& arr, int index )
-begin
-	array<int> temp[0];
-	loop int i = 1 until i > arr.count()
-		begin
-		if i != index then
-			temp.add( arr[i] );
-		end;
-		i = i + 1;
-	end;
-	arr.assign( temp );
-end;
 
 
 array<int> behav_vids[num_uniq_trials]; # array with values 1-num_uniq_trials
@@ -107,68 +90,24 @@ behav_vids.fill(1,num_uniq_trials,1,1);
 array<int> first_shuffle[num_uniq_trials]; 
 first_shuffle.fill(1,num_uniq_trials,1,1);
 
-array<int> second_shuffle[num_uniq_trials-30]; 
-second_shuffle.fill(1,num_uniq_trials-30,1,1);
-
-array<int> third_shuffle[num_uniq_trials-60]; 
-third_shuffle.fill(1,num_uniq_trials-60,1,1);
-
 array<int> behav_trials[total_trials]; # where to store the trial nums on which we will ask behavior
 behav_trials.fill(1,total_trials,0,0); #start_index, end_index, start_value, value_step 
-
-
-term.print_line( behav_vids );
-
 
 # pick 30 random numers from the full set
 first_shuffle.shuffle();
 
-#term.print_line( first_shuffle );
-
-loop int i=1 until i>30 begin	
-	behav_trials[first_shuffle[i]] = 1; 
+loop int i=1 until i>90 begin	
 	
-	#term.print(string(first_shuffle[i]));
+	if i < 31 then
+		behav_trials[first_shuffle[i]] = 1; 
+	elseif i > 30 && i<61 then
+		behav_trials[first_shuffle[i]+num_uniq_trials] = 1;
+	else
+		behav_trials[first_shuffle[i]+2*num_uniq_trials] = 1; 	
+	end;
 
-# stuck here.... need to accuont for how many values already removed....
-	remove(behav_vids, first_shuffle[i]+i-1);	# remove these values from behav_vids
-	#term.print(string(behav_vids[first_shuffle[i]]));
-	
 	i=i+1;
 end;
-
-term.print_line( behav_vids );
-term.print("\n");
-
-# pick another random 30 from the reduced set
-second_shuffle.assign(behav_vids);
-second_shuffle.shuffle();
-
-loop int i=31 until i>60 begin
-	
-	behav_trials[second_shuffle[i]+num_uniq_trials] = 1;
-	remove(behav_vids, second_shuffle[i]);	# remove these
-	i=i+1;
-end;
-
-term.print_line( behav_vids );
-term.print("\n");
-	
-# and again one more time
-third_shuffle.assign(behav_vids);
-third_shuffle.shuffle();
-loop int i=61 until i>90 begin
-	behav_trials[third_shuffle[i]+2*num_uniq_trials] = 1;
-	remove(behav_vids, third_shuffle[i]);	# remove these
-	i=i+1;
-end;
-
-term.print_line( behav_vids );
-
-
-term.print("\n");
-
-term.print_line( behav_trials );
 
 #Read in words for intelligiblity test
 int num_words = 5; # per trial
