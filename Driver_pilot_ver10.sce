@@ -20,12 +20,14 @@ trial {
    trial_type = specific_response;
 	terminator_button = 2;
    picture {	
-      text { caption = "You will hear a mixture of speech and you are required to \n
-			attend to the speaker that matches the video/face on the screen. \n\n
-			After each trial (3 secs) you will be asked to type the words you heard on that trial \n
+      text { caption = "You will hear a mixture of people talking and you are required to \n
+			attend to the speaker that matches the face on the screen. \n\n
+			
+			On random trials you will be asked to type all the words you heard on that trial \n
 
 			Keep your head centered facing the middle of the screen and \n
 			shift your eyes to look at the lips of the speaker. \n\n
+			
 			The target speaker will randomly switch between the left and right side \n
 			of the screen on different trials \n
 			Press spacebar to begin. Good luck! "; 
